@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ONCOLYZER</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="logo">ONCOLYZE</div>
+<div class="navlinks">
+<a href="#about">About</a>
+<a href="#upload">Upload</a>
+<a href="#galaxy">Mutation</a>
+<a href="#results">Results</a>
+</div>
+</nav>
+
+<section class="hero">
+<h1>ONCOLYZER</h1>
+<p>AI Assisted Cancer Mutation Visualization Platform</p>
+<a href="#about"><button>Start Exploring</button></a>
+</section>
+
+
+<section id="about" class="section">
+
+<div class="container">
+
+<h2>About the Platform</h2>
+
+<div class="about-grid">
+
+<div class="about-text">
+
+<p>
+ONCOLYZER converts genomic mutation reports into interactive visual
+networks. It analyzes gene mutation patterns and generates a mutation
+galaxy showing relationships between detected cancer genes.
+</p>
+
+<p>
+The platform estimates potential cancer stage indicators and provides
+clinical guidance suggestions including treatment direction,
+preventive care, and lifestyle recommendations.
+</p>
+
+<p>
+This project demonstrates how bioinformatics visualization and
+AI-driven interpretation can transform raw genetic data into
+understandable insights.
+</p>
+
+</div>
+
+<div class="about-images">
+
+<img src="https://images.unsplash.com/photo-1579154204601-01588f351e67">
+<img src="https://images.unsplash.com/photo-1581091870622-3f1f5b1b2a7d">
+<img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="upload" class="section">
+
+<div class="container center">
+
+<h2>Upload Mutation Report</h2>
+
+<p>
+Upload a genomic mutation report (.txt file) containing gene mutation
+data. The ONCOLYZE analysis engine will detect cancer-associated genes
+such as TP53, BRCA1, EGFR, KRAS and visualize their mutation network.
+</p>
+
+<p>
+Once uploaded, the system performs gene recognition, mutation
+clustering, and visual galaxy generation. The final report will
+summarize mutation impact and provide treatment guidance.
+</p>
+
+<input type="file" id="fileInput">
+
+<br>
+
+<button onclick="processFile()">Submit & Analyze</button>
+
+<div id="processing"></div>
+
+</div>
+
+</section>
+
+
+<section id="galaxy" class="section">
+
+<div class="container center">
+
+<h2>Mutation Galaxy</h2>
+
+<canvas id="galaxyCanvas" width="900" height="500"></canvas>
+
+</div>
+
+</section>
+
+
+<section id="results" class="section">
+
+<div class="container">
+
+<h2>Analysis Report</h2>
+
+<div id="reportBox"></div>
+
+<button id="downloadBtn" onclick="downloadReport()">Download Report</button>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>ONCOLYZER • Cancer Mutation Analysis Platform</p>
+
+<p>© 2026 All Rights Reserved</p>
+
+<p>Project Credits: Bioinformatics Visualization Prototype</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
